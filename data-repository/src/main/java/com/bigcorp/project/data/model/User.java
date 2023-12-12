@@ -37,7 +37,7 @@ public class User {
 	 * Met à jour this.firstName
 	 * @param firstName
 	 */
-	public void methodePrivee(String firstName) {
+	private void methodePrivee(String firstName) {
 		this.firstName = firstName;
 	}
 
