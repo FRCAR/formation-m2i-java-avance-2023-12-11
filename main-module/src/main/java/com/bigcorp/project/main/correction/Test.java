@@ -5,7 +5,7 @@ import java.util.List;
 
 
 /**
- * Crée une outofmemoryError. 
+ * Crée une OutOfMemoryError. 
  * A lancer avec -Xms128m -Xmx128m pour ne pas consommer trop de mémoire sur le système
  */
 public class Test {
