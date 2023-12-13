@@ -42,6 +42,10 @@ public class Child {
 		System.out.println(vainqueur.nom + " a gagné ! ");
 		return vainqueur;
 	}
+
+	public int getAgeCarre() {
+		return this.age * this.age;
+	}
 	
 	
 
