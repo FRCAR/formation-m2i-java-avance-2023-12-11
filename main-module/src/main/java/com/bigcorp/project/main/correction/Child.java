@@ -36,6 +36,13 @@ public class Child {
 		return "Child [nom=" + nom + ", age=" + age + "]";
 	}
 	
+	public Child joueAPierreFeuilleCiseaux(Child other) {
+		System.out.println(this.nom + " joue à pierre feuilles ciseaux avec " + other.nom);
+		Child vainqueur = Math.random() > 0.5 ? this:other;
+		System.out.println(vainqueur.nom + " a gagné ! ");
+		return vainqueur;
+	}
+	
 	
 
 }

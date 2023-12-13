@@ -33,7 +33,13 @@ public class StreamDemo {
 				.filter(c -> c.getAge() > 11)
 				.forEach(System.out::println);
 		
-		List<Child> enfants = List.of(new Child("Jeanjean", 2), new Child("Roger", 10));
+		List<Child> enfants = List.of(new Child("Jeanjean", 2),
+				new Child("Roger", 10),
+				new Child("Séverine", 5),
+				new Child("Abdel", 6),
+				new Child("José", 9),
+				new Child("Sophie", 12)
+				);
 		
 		System.out.println("\nAffichage de la moyenne des âges des enfants");
 		double moyenneDesAges = enfants.stream()
@@ -42,6 +48,9 @@ public class StreamDemo {
 		
 		List<Child> collect = enfants.stream().filter(c -> c.getAge() > 5).collect(Collectors.toList());
 		System.out.println(collect.size());
+		
+		Child vainqueur = enfants.parallelStream().reduce(Child::joueAPierreFeuilleCiseaux).get();
+		System.out.println("Le vainqueur est : " + vainqueur.getNom());
 		
 	}
 
